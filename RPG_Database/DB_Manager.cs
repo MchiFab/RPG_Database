@@ -21,7 +21,6 @@ namespace RPG_Database
             Database.SetInitializer(new CreateDatabaseIfNotExists<DB_Manager>());
             Database.Initialize(false);
             Fill();
-            
         }
 
         /// <summary>
@@ -70,6 +69,10 @@ namespace RPG_Database
         public DbSet<RPG_Type> Types { get; set; }
         public DbSet<RPG_Team> Teams { get; set; }
 
+        /// <summary>
+        /// Takes data from fill.txt and adds it to the database,
+        /// also performs the mapping via many-to-many relationship tables
+        /// </summary>
         private void Fill()
         {
             string table = "";
