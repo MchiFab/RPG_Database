@@ -32,7 +32,7 @@ namespace RPG_Database
 
         public int? Accuracy { get; set; }
 
-        public int? AP { get; set; }
+        public int? LearnLevel { get; set; }
 
         public int? TypeID { get; set; }
 

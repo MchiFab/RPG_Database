@@ -101,7 +101,7 @@ namespace RPG_Database
                                 Damage = ParseNullableInt(entries[1]),
                                 DamageClass = entries[2],
                                 Accuracy = ParseNullableInt(entries[3]),
-                                AP = ParseNullableInt(entries[4]),
+                                LearnLevel = ParseNullableInt(entries[4]),
                                 TypeID = ParseNullableInt(entries[5])
                             };
                             this.Attacks.Add(attack);
@@ -163,10 +163,11 @@ namespace RPG_Database
                                 BasePDefense = ParseNullableInt(entries[4]),
                                 BaseSDefense = ParseNullableInt(entries[5]),
                                 BaseSpeed = ParseNullableInt(entries[6]),
-                                CanEvolve = ParseNullableInt(entries[7]),
-                                SpritesheetPath = entries[8],
-                                TypeID = ParseNullableInt(entries[9]),
-                                LocationID = ParseNullableInt(entries[10])
+                                Stage = ParseNullableInt(entries[7]),
+                                EvolutionLevel = ParseNullableInt(entries[8]),
+                                SpritesheetPath = entries[9],
+                                TypeID = ParseNullableInt(entries[10]),
+                                LocationID = ParseNullableInt(entries[11])
                             };
                             this.Sorcerers.Add(sorcerer);
                             this.SaveChanges();

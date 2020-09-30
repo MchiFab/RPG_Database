@@ -36,7 +36,9 @@ namespace RPG_Database
 
         public int? BaseSpeed { get; set; }
 
-        public int? CanEvolve { get; set; }
+        public int? Stage { get; set; }
+
+        public int? EvolutionLevel { get; set; }
 
         public string SpritesheetPath { get; set; }
 
