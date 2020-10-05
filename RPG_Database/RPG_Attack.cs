@@ -27,9 +27,6 @@ namespace RPG_Database
 
         public int? Damage { get; set; }
 
-        [StringLength(1)]
-        public string DamageClass { get; set; }
-
         public int? Accuracy { get; set; }
 
         public int? LearnLevel { get; set; }

@@ -26,13 +26,9 @@ namespace RPG_Database
 
         public int? BaseHP { get; set; }
 
-        public int? BasePAttack { get; set; }
+        public int? BaseAttack { get; set; }
 
-        public int? BaseSAttack { get; set; }
-
-        public int? BasePDefense { get; set; }
-
-        public int? BaseSDefense { get; set; }
+        public int? BaseDefense { get; set; }
 
         public int? BaseSpeed { get; set; }
 
