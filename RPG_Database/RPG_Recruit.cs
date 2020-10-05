@@ -39,8 +39,6 @@ namespace RPG_Database
 
         public int? Level { get; set; }
 
-        //public virtual List<RPG_Recruit> Recruits { get; set; }
-
         public int? SorcererID { get; set; }
 
         public RPG_Sorcerer Sorcerer { get; set; }
