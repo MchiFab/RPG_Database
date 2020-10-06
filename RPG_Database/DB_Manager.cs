@@ -86,7 +86,6 @@ namespace RPG_Database
                     if (line[0] == '+')
                     {
                         table = line.Substring(1);
-                        reader.ReadLine();
                         continue;
                     }
 
@@ -99,10 +98,9 @@ namespace RPG_Database
                             {
                                 Name = entries[0],
                                 Damage = ParseNullableInt(entries[1]),
-                                DamageClass = entries[2],
-                                Accuracy = ParseNullableInt(entries[3]),
-                                LearnLevel = ParseNullableInt(entries[4]),
-                                TypeID = ParseNullableInt(entries[5])
+                                Accuracy = ParseNullableInt(entries[2]),
+                                LearnLevel = ParseNullableInt(entries[3]),
+                                TypeID = ParseNullableInt(entries[4])
                             };
                             this.Attacks.Add(attack);
                             this.SaveChanges();
@@ -142,13 +140,11 @@ namespace RPG_Database
                             {
                                 Name = entries[0],
                                 HP = ParseNullableInt(entries[1]),
-                                PAttack = ParseNullableInt(entries[2]),
-                                SAttack = ParseNullableInt(entries[3]),
-                                PDefense = ParseNullableInt(entries[4]),
-                                SDefense = ParseNullableInt(entries[5]),
-                                Speed = ParseNullableInt(entries[6]),
-                                Level = ParseNullableInt(entries[7]),
-                                SorcererID = ParseNullableInt(entries[8])
+                                Attack = ParseNullableInt(entries[2]),
+                                Defense = ParseNullableInt(entries[3]),
+                                Speed = ParseNullableInt(entries[4]),
+                                Level = ParseNullableInt(entries[5]),
+                                SorcererID = ParseNullableInt(entries[6])
                             };
                             this.Recruits.Add(recruit);
                             this.SaveChanges();
@@ -158,16 +154,14 @@ namespace RPG_Database
                             {
                                 Name = entries[0],
                                 BaseHP = ParseNullableInt(entries[1]),
-                                BasePAttack = ParseNullableInt(entries[2]),
-                                BaseSAttack = ParseNullableInt(entries[3]),
-                                BasePDefense = ParseNullableInt(entries[4]),
-                                BaseSDefense = ParseNullableInt(entries[5]),
-                                BaseSpeed = ParseNullableInt(entries[6]),
-                                Stage = ParseNullableInt(entries[7]),
-                                EvolutionLevel = ParseNullableInt(entries[8]),
-                                SpritesheetPath = entries[9],
-                                TypeID = ParseNullableInt(entries[10]),
-                                LocationID = ParseNullableInt(entries[11])
+                                BaseAttack = ParseNullableInt(entries[2]),
+                                BaseDefense = ParseNullableInt(entries[3]),
+                                BaseSpeed = ParseNullableInt(entries[4]),
+                                Stage = ParseNullableInt(entries[5]),
+                                EvolutionLevel = ParseNullableInt(entries[6]),
+                                SpritesheetPath = entries[7],
+                                TypeID = ParseNullableInt(entries[8]),
+                                LocationID = ParseNullableInt(entries[9])
                             };
                             this.Sorcerers.Add(sorcerer);
                             this.SaveChanges();
