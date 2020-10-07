@@ -214,6 +214,22 @@ namespace RPG_Database
                             t.Recruits.Add(addRecruit);
                             this.SaveChanges();
                             break;
+                        case "SorcererAttack":
+                            int sorcererID = int.Parse(entries[0]);
+
+                            RPG_Sorcerer s = (from search in this.Sorcerers
+                                              where search.SorcererID == sorcererID
+                                              select search).FirstOrDefault();
+
+                            int attackID2 = int.Parse(entries[1]);
+
+                            RPG_Attack addAttackS = (from search in this.Attacks
+                                                     where search.AttackID == attackID2
+                                                     select search).FirstOrDefault();
+
+                            s.BaseAttacks.Add(addAttackS);
+                            this.SaveChanges();
+                            break;
                     }
                 }
 
